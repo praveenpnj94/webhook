@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WebhookController {
 
     @PostMapping
-    public ResponseEntity<?> print(@RequestBody Object requestBody) {
+    public ResponseEntity<String> print(@RequestBody String requestBody) {
         System.out.println(requestBody);
         return new ResponseEntity<>(requestBody, HttpStatus.OK);
     }
